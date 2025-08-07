@@ -10,8 +10,6 @@ import {
 import { isAuthenticated } from "./utils/auth";
 import TaskItem from "./TaskItem";
 import AddTodo from "./AddTodo";
-import TaskProvider from "../context/TaskContext";
-import TailwindP from "./TailwindP";
 
 function App() {
   return (
