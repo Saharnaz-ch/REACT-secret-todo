@@ -28,7 +28,6 @@ function App() {
           />
           <Route path="/taskitem" element={<TaskItem />} />
           <Route path="/add" element={<AddTodo />} />
-          <Route path="/tailwind" element={<TailwindP />} />
         </Routes>
       </Router>
     </div>

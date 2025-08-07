@@ -142,42 +142,62 @@ export default function Dashboard() {
             />
             {showMenu && (
               <div className="absolute top-12 right-0 bg-white shadow-lg rounded-lg p-3 z-10 min-w-[160px]">
-                <p className="font-bold mb-2">Welcome, Sahar!</p>
+                <p className="font-bold mb-2">Welcome Back!</p>
                 <ul className="text-sm space-y-1">
                   <li>
-                    <button
-                      className="w-full text-left hover:text-purple-600"
+                    <span
+                      className="flex w-full text-left hover:text-purple-600 cursor-pointer"
                       onClick={() => navigate("/dashboard")}
                     >
+                      <img
+                        className="size-3.5 mt-1 mr-1.5"
+                        src="../public/img/dashboard.png"
+                        alt=""
+                      />
                       Dashboard
-                    </button>
+                    </span>
                   </li>
                   <li>
-                    <button
-                      className="w-full text-left hover:text-purple-600"
+                    <span
+                      className="flex w-full text-left hover:text-purple-600 cursor-pointer"
                       onClick={() => navigate("/favorites")}
                     >
+                      <img
+                        className="size-3.5 mt-1 mr-1.5"
+                        src="../public/img/heart.png"
+                        alt=""
+                      />
                       Favorites
-                    </button>
+                    </span>
                   </li>
                   <li>
-                    <button
-                      className="w-full text-left hover:text-purple-600"
+                    <span
+                      className="flex w-full text-left hover:text-purple-600 cursor-pointer"
                       onClick={() => navigate("/addtask")}
                     >
+                      <img
+                        className="size-3.5 mt-1 mr-1.5"
+                        src="../public/img/more.png"
+                        alt=""
+                      />
                       Add Task
-                    </button>
+                    </span>
                   </li>
                   <li>
-                    <button
-                      className="w-full text-left hover:text-purple-600"
+                    <span
+                      className="flex w-full text-left hover:text-purple-600 cursor-pointer"
                       onClick={() => {
                         localStorage.removeItem("user");
                         navigate("/login");
                       }}
                     >
+                      <img
+                        className="size-3.5 mt-1 mr-1.5"
+                        src="../public/img/logout.png"
+                        alt=""
+                      />
                       Logout
-                    </button>
+                    </span>
                   </li>
                 </ul>
               </div>
