@@ -109,7 +109,7 @@ function LoginForm() {
       {/* Right side: Image */}
       <div className="w-1/2">
         <img
-          src="../src/img/purple.jpg"
+          src="../public/img/purple.jpg"
           alt="Purple Background"
           className="object-cover w-full h-full"
         />
