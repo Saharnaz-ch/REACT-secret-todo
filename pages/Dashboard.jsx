@@ -43,7 +43,7 @@ export default function Dashboard() {
   const completedTasks = filteredTask.filter((task) => task.completed === true);
 
   return (
-    <div className="flex h-screen bg-white text-black">
+    <div className="flex h-screen w-screen bg-white text-black">
       {/* LEFT (main) */}
       <div className="flex-1 p-10">
         {/* Search */}
@@ -151,7 +151,7 @@ export default function Dashboard() {
                     >
                       <img
                         className="size-3.5 mt-1 mr-1.5"
-                        src="../public/img/dashboard.png"
+                        src="/img/dashboard.png"
                         alt=""
                       />
                       Dashboard
@@ -164,7 +164,7 @@ export default function Dashboard() {
                     >
                       <img
                         className="size-3.5 mt-1 mr-1.5"
-                        src="../public/img/heart.png"
+                        src="/img/heart.png"
                         alt=""
                       />
                       Favorites
@@ -177,7 +177,7 @@ export default function Dashboard() {
                     >
                       <img
                         className="size-3.5 mt-1 mr-1.5"
-                        src="../public/img/more.png"
+                        src="/img/more.png"
                         alt=""
                       />
                       Add Task
@@ -193,7 +193,7 @@ export default function Dashboard() {
                     >
                       <img
                         className="size-3.5 mt-1 mr-1.5"
-                        src="../public/img/logout.png"
+                        src="/img/logout.png"
                         alt=""
                       />
                       Logout

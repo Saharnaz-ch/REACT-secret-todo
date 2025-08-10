@@ -52,7 +52,7 @@ export default function TaskItem({ task, onClick }) {
             e.stopPropagation();
             deleteTask(task.id);
           }}
-          className="text-red-400 hover:text-red-600"
+          className="text-red-400 hover:text-red-600 cursor-pointer"
         >
           <MdOutlineRestoreFromTrash size={18} />
         </button>

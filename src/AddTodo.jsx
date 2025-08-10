@@ -86,7 +86,7 @@ export default function AddTodo({ onClose }) {
           </div>
           <button
             type="submit"
-            className="mt-2 bg-purple-600 text-[#8C4CC5] text-base font-semibold py-2 rounded-md shadow hover:bg-purple-700 transition justify-center p-[35%]"
+            className="mt-2 bg-purple-600 text-[#ffffff] text-base font-semibold py-2 rounded-md shadow hover:bg-purple-700 transition justify-center p-[35%]"
           >
             +Add New
           </button>

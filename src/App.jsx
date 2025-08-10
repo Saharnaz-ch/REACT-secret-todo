@@ -10,25 +10,37 @@ import {
 import { isAuthenticated } from "./utils/auth";
 import TaskItem from "./TaskItem";
 import AddTodo from "./AddTodo";
+import TaskProvider from "../context/TaskContext";
+
+// const isAuthenticated = false
 
 function App() {
   return (
     <div>
       <Router>
-        <Routes>
-          {/* <Navigate /> used to redirect users safely. replacement for Redirect */}
-          <Route path="/" element={<Navigate to="/login" />} />
-          <Route path="/login" element={<Login />} />
-          <Route
-            path="/dashboard"
-            //redirect user based on login status using Navigate
-            element={
-              isAuthenticated() ? <Dashboard /> : <Navigate to="/login" />
-            }
-          />
-          <Route path="/taskitem" element={<TaskItem />} />
-          <Route path="/add" element={<AddTodo />} />
-        </Routes>
+        <TaskProvider>
+          <Routes>
+            {/* <Navigate /> used to redirect users safely. replacement for Redirect */}
+            <Route
+              path="/"
+              element={
+                isAuthenticated() ? (
+                  <Navigate to="/dashboard" />
+                ) : (
+                  <Navigate to="/login" />
+                )
+              }
+            />
+            <Route path="/login" element={<Login />} />
+            <Route
+              path="/dashboard"
+              //redirect user based on login status using Navigate
+              element={<Dashboard />}
+            />
+            <Route path="/taskitem" element={<TaskItem />} />
+            <Route path="/add" element={<AddTodo />} />
+          </Routes>
+        </TaskProvider>
       </Router>
     </div>
   );

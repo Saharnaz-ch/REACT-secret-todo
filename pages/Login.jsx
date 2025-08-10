@@ -25,17 +25,24 @@ function LoginForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (user.trim()) {
-      login(user.trim());
+
+    //for restericted user
+    const trimmedUser = user.trim();
+
+    //checks user and pass
+    if (trimmedUser === "admin" && password == "p@ssw0rd") {
+      login(trimmedUser);
       navigate("/dashboard");
+    } else {
+      alert("Invalid username or password");
     }
   };
 
   useEffect(() => {
-    if (isAuthenticated()) {
-      navigate("/dashboard");
+    const alreadyLoggedIn = isAuthenticated();
+    if (alreadyLoggedIn) {
+      navigate("/dashboard", { replace: true });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -87,12 +94,12 @@ function LoginForm() {
           <div>
             <button
               type="submit"
-              className="bg-purple-600 hover:bg-purple-700 text-[#8C4CC5] font-semibold px-6 py-2 rounded cursor-pointer"
+              className="bg-purple-600 hover:bg-purple-700 text-[#ffffff] font-semibold px-6 py-2 rounded cursor-pointer"
             >
               LOGIN
             </button>
             <p className="text-red-400 text-xs pt-5">
-              Just type in any username and password and you will be in...
+              use "admin" as username and "p@ssw0rd" as the password
             </p>
           </div>
         </form>

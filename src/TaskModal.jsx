@@ -35,7 +35,7 @@ export default function TaskModal({ task, onClose, onUpdate }) {
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold"
+          className="absolute top-4 right-4 text-black"
           aria-label="Close"
         >
           ×
@@ -81,7 +81,7 @@ export default function TaskModal({ task, onClose, onUpdate }) {
             <button
               type="button"
               onClick={handleEditClick}
-              className="w-full mt-2 py-2 bg-purple-600 hover:bg-purple-700 text-[#8C4CC5] font-semibold rounded-md shadow transition"
+              className="w-full mt-2 py-2 bg-purple-600 hover:bg-purple-700 text-[#ffffff] font-semibold rounded-md shadow transition"
             >
               Edit
             </button>
@@ -135,7 +135,7 @@ export default function TaskModal({ task, onClose, onUpdate }) {
             </div>
             <button
               type="submit"
-              className="w-full py-2 bg-purple-600 hover:bg-purple-700 text-[#8C4CC5] font-semibold rounded-md shadow transition"
+              className="w-full py-2 bg-purple-600 hover:bg-purple-700 text-[#ffffff] font-semibold rounded-md shadow transition"
             >
               Save
             </button>
